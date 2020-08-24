@@ -14,4 +14,6 @@ jobs:
         git clone -b multiplatform https://github.com/fwilhe2/Inzell
         cd Inzell
         ./gradlew publishToMavenLocal
-        find ~/.m2
+        cd ..
+        cd kotlin-jvm-mvn
+        mvn exec:java
