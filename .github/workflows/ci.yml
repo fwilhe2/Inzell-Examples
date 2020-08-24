@@ -16,4 +16,4 @@ jobs:
         ./gradlew publishToMavenLocal
         cd ..
         cd kotlin-jvm-mvn
-        mvn exec:java
+        mvn package exec:java
