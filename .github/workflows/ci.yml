@@ -14,10 +14,13 @@ jobs:
           git clone -b multiplatform https://github.com/fwilhe2/Inzell
           cd Inzell
           ./gradlew publishToMavenLocal
-          cd ..
-      - name: Run jvm java example
+      - name: Run jvm kotlin example
         run: |
           cd kotlin-jvm-mvn
+          mvn package exec:java
+      - name: Run jvm java example
+        run: |
+          cd java-mvn
           mvn package exec:java
       - name: Build browserDistribution
         run: |
