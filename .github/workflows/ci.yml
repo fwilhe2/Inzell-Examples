@@ -19,10 +19,10 @@ jobs:
         run: |
           cd kotlin-jvm-mvn
           mvn package exec:java
-      - name: Deploy js example
+      - name: Build browserDistribution
         run: |
           cd js-browser
-          ./gradlew jsBrowserDistribution
+          ./gradlew browserDistribution
           mkdir public
           cp -r build/distributions/* public/
       - name: Deploy to GitHub Pages
