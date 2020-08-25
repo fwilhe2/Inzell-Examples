@@ -23,8 +23,9 @@ jobs:
         run: |
           cd js-browser
           ./gradlew browserDistribution
+          cd ..
           mkdir public
-          cp -r build/distributions/* public/
+          cp -r js-browser/build/distributions/* public/
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
