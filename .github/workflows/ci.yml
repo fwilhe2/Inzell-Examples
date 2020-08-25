@@ -8,12 +8,27 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: ci
-      run: |
-        git clone -b multiplatform https://github.com/fwilhe2/Inzell
-        cd Inzell
-        ./gradlew publishToMavenLocal
-        cd ..
-        cd kotlin-jvm-mvn
-        mvn package exec:java
+      - uses: actions/checkout@v2
+      - name: Install Inzell Devel version
+        run: |
+          git clone -b multiplatform https://github.com/fwilhe2/Inzell
+          cd Inzell
+          ./gradlew publishToMavenLocal
+          cd ..
+      - name: Run jvm java example
+        run: |
+          cd kotlin-jvm-mvn
+          mvn package exec:java
+      - name: Deploy js example
+        run: |
+          cd js-browser
+          ./gradlew jsBrowserDistribution
+          mkdir public
+          cp -r build/distributions/* public/
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: public
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
