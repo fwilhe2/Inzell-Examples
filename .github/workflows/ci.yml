@@ -6,7 +6,7 @@ on:
     - cron:  '0 0 * * *'
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 14
@@ -26,6 +26,10 @@ jobs:
         run: |
           cd java-mvn
           mvn package exec:java
+      - name: Run kotlin nodejs example
+        run: |
+          cd kotlin-js-node
+          ./gradlew nodeRun
       - name: Build browserDistribution
         run: |
           cd js-browser
