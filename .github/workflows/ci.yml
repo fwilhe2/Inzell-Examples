@@ -30,17 +30,17 @@ jobs:
         run: |
           cd kotlin-js-node
           ./gradlew nodeRun
-      - name: Build browserDistribution
-        run: |
-          cd js-browser
-          ./gradlew browserDistribution
-          cd ..
-          mkdir public
-          cp -r js-browser/build/distributions/* public/
-      - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v2
-        with:
-          target_branch: gh-pages
-          build_dir: public
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Build browserDistribution
+      #   run: |
+      #     cd js-browser
+      #     ./gradlew browserDistribution
+      #     cd ..
+      #     mkdir public
+      #     cp -r js-browser/build/distributions/* public/
+      # - name: Deploy to GitHub Pages
+      #   uses: crazy-max/ghaction-github-pages@v2
+      #   with:
+      #     target_branch: gh-pages
+      #     build_dir: public
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
