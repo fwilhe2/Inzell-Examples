@@ -34,5 +34,5 @@ fun main() {
         add(efficiency)
     }
 
-    println(HtmlPrinter(sheet))
+    println(CsvPrinter(sheet))
 }

@@ -36,6 +36,4 @@ fun main() {
 
 
     CsvPrinter(sheet).printToStandardOut()
-    HtmlPrinter(sheet).printToStandardOut()
-
 }

@@ -35,5 +35,5 @@ fun main() {
         add(efficiency)
     }
 
-    HtmlPrinter(sheet).browserPrint(document)
+    CsvPrinter(sheet).browserPrint(document)
 }
