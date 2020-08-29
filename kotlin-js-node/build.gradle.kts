@@ -8,6 +8,7 @@ repositories {
     mavenCentral()
     mavenLocal()
     jcenter()
+    maven(url = "https://kotlin.bintray.com/kotlinx")
 }
 dependencies {
     testImplementation(kotlin("test-js"))

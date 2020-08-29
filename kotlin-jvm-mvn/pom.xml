@@ -30,6 +30,14 @@
             <name>bintray</name>
             <url>https://dl.bintray.com/kotlin/kotlinx.html</url>
         </repository>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>kotlinx</id>
+            <name>kotlinx</name>
+            <url>https://kotlin.bintray.com/kotlinx/</url>
+        </repository>
     </repositories>
 
 
