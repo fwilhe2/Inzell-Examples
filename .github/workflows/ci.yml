@@ -15,7 +15,7 @@ jobs:
           java-version: 14
       - name: Install Inzell Devel version
         run: |
-          git clone https://github.com/fwilhe2/Inzell
+          git clone -b type-system https://github.com/fwilhe2/Inzell
           cd Inzell
           ./gradlew publishToMavenLocal
       - name: Run jvm kotlin example
