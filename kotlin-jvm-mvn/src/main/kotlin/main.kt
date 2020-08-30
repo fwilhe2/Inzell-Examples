@@ -1,4 +1,5 @@
 import com.github.fwilhe.inzell.*
+import java.io.File
 
 fun main() {
     val numberOfCpus = Column("Number of CPUs") { x -> x * x }
@@ -36,4 +37,6 @@ fun main() {
     CsvPrinter(sheet).printToStandardOut()
     MarkdownPrinter(sheet).printToStandardOut()
     HtmlPrinter(sheet).printToStandardOut()
+
+    File("table.md").writeText(MarkdownPrinter(sheet).toString())
 }
