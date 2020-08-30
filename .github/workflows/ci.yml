@@ -37,7 +37,7 @@ jobs:
         run: |
           set -x
           mkdir -p ../Inzell/build/js/packages/Inzell-jsLegacy/kotlin
-          cp -r Inzell/build/js/packages/Inzell-jsLegacy ../Inzell/build/js/packages/
+          cp -r Inzell/build/js/ ../Inzell/build/
           cd js-node
           find ../../Inzell
           node index.js
