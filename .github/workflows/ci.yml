@@ -35,11 +35,9 @@ jobs:
           ./gradlew nodeRun
       - name: Run js node example
         run: |
-          set -x
           mkdir -p ../Inzell/build/js/packages/Inzell-jsLegacy/kotlin
           cp -r Inzell/build/js/ ../Inzell/build/
           cd js-node
-          find ../../Inzell
           node index.js
       # - name: Build browserDistribution
       #   run: |
