@@ -39,6 +39,7 @@ jobs:
           mkdir -p ../Inzell/build/js/packages/Inzell-jsLegacy/kotlin
           cp -r Inzell/build/js/packages/Inzell-jsLegacy ../Inzell/build/js/packages/Inzell-jsLegacy
           cd js-node
+          find ../../Inzell
           node index.js
       # - name: Build browserDistribution
       #   run: |
