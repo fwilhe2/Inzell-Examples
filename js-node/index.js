@@ -1,5 +1,5 @@
-import pkg from '/home/florian/code/Inzell/build/js/packages/Inzell-jsLegacy/kotlin/Inzell-jsLegacy.js';
-const { revAndCap } = pkg;
+const inzell = require('../../Inzell/build/js/packages/Inzell-jsLegacy/kotlin/Inzell-jsLegacy.js')
 
-revAndCap()
+const s = inzell.com.github.fwilhe.inzell.spreadsheet()
 
+inzell.com.github.fwilhe.inzell.foo()

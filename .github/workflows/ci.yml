@@ -13,9 +13,12 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 14
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: '14'
       - name: Install Inzell Devel version
         run: |
-          git clone -b master https://github.com/fwilhe2/Inzell
+          git clone -b js-api https://github.com/fwilhe2/Inzell
           cd Inzell
           ./gradlew publishToMavenLocal
       - name: Run jvm kotlin example
@@ -30,9 +33,15 @@ jobs:
         run: |
           cd kotlin-js-node
           ./gradlew nodeRun
+      - name: Run js node example
+        run: |
+          mkdir -p ../Inzell/build/js/packages/Inzell-jsLegacy/kotlin
+          cp -r Inzell/build/js/ ../Inzell/build/
+          cd js-node
+          node index.js
       # - name: Build browserDistribution
       #   run: |
-      #     cd js-browser
+      #     cd kotlin-js-browser
       #     ./gradlew browserDistribution
       #     cd ..
       #     mkdir public
