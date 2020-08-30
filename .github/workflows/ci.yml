@@ -32,7 +32,7 @@ jobs:
           ./gradlew nodeRun
       # - name: Build browserDistribution
       #   run: |
-      #     cd js-browser
+      #     cd kotlin-js-browser
       #     ./gradlew browserDistribution
       #     cd ..
       #     mkdir public
