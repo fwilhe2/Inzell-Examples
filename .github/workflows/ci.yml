@@ -30,6 +30,8 @@ jobs:
         run: |
           cd kotlin-js-node
           ./gradlew nodeRun
+      - name: Run js node example
+          cp Inzell/build/js/packages/Inzell-jsLegacy/kotlin/Inzell-jsLegacy.js ..
       # - name: Build browserDistribution
       #   run: |
       #     cd kotlin-js-browser
