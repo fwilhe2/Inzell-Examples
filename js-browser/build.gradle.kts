@@ -15,7 +15,7 @@ repositories {
 dependencies {
     testImplementation(kotlin("test-js"))
     implementation("org.jetbrains.kotlinx:kotlinx-html-js:0.7.2")
-    implementation("com.github.fwilhe.inzell:Inzell-js:0.1.0-SNAPSHOT")
+    implementation("com.github.fwilhe.inzell:Inzell-js:0.0.3.norelease")
 }
 kotlin {
     js {
