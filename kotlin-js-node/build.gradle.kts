@@ -12,7 +12,7 @@ repositories {
 }
 dependencies {
     testImplementation(kotlin("test-js"))
-    implementation("com.github.fwilhe.inzell:Inzell-js")
+    implementation("com.github.fwilhe.inzell:Inzell-js:0.0.3.norelease")
 }
 kotlin {
     js(IR) {
