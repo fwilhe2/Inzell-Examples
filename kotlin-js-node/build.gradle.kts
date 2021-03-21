@@ -1,5 +1,5 @@
 plugins {
-    kotlin("js") version "1.4.0"
+    kotlin("js") version "1.4.31"
 }
 group = "me.florian"
 version = "1.0-SNAPSHOT"
